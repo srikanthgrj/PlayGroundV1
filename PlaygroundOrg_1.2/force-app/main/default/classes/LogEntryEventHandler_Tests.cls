@@ -67,6 +67,10 @@ private class LogEntryEventHandler_Tests {
       targetEventLoggingLevel.ordinal() < targetStorageLoggingLevel.ordinal(),
       'Test started under the wrong conditions, targetEventLoggingLevel ordinal should be less than the targetStorageLoggingLevel ordinal'
     );
+    System.Assert.isTrue(
+      targetEventLoggingLevel.ordinal() < targetStorageLoggingLevel.ordinal(),
+      'Test123 started under the wrong conditions, targetEventLoggingLevel ordinal should be less than the targetStorageLoggingLevel ordinal'
+    );
     LoggerSettings__c settings = Logger.getUserSettings();
     settings.LoggingLevel__c = targetEventLoggingLevel.name();
     settings.DefaultPlatformEventStorageLoggingLevel__c = System.LoggingLevel.INFO.name();
